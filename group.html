@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/groups.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modal.css">
+</head>
+
+<body id="body">
+    <div id="header"></div>
+    <div id="content"></div>
+
+    <div class="grid-container">
+        <div>
+            <button class="btn saveButton" onclick="onSaveGroup()">Сохранить</button>
+        </div>
+        <div>
+            <div id="modalGroup"></div>
+        </div>
+    </div>
+    <script src="js/Consts.js"></script>
+    <script src="js/modalGroup.js"></script>
+    <script src="js/groups.js"></script> 
+</body>
+<script>
+    $(function () {
+        $('#modalGroup').load("modalGroup.html");
+    });
+    $(function () {
+        $('#header').load("header.html");
+    });
+</script>
+</html>

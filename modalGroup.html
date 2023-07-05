@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <!--<script src="js/modal.js"></script>-->
+    <!-- Trigger/Open The Modal -->
+    <button id="addButtonGroup" class="btn addButton">Добавить группу</button>
+
+    <!-- The Modal -->
+    <div id="modalWindowGroup" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-grid-container">
+                <div>
+                    <div text-field>
+                        <label class="text-field__label" for="name">Имя</label>
+                        <input  class="text-field__input" id="name" type="text" placeholder="Alaxander"></label>
+                    </div>
+                </div>                
+            </div>
+            <div>
+                <button id="addButtonGroupModel" class="btn addButton" onclick="addGroup()">Добавить</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("modalWindowGroup"); 
+
+        var btn = document.getElementById("addButtonGroup");
+
+        var span = document.getElementsByClassName("close")[0];
+        
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        } 
+    </script>
+</body>
+
+</html>
